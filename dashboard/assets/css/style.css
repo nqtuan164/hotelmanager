@@ -1,0 +1,47 @@
+/* Put your CSS here */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "segoe UI" sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.dashboard {
+    width: 100%;
+    height: 100%;
+}
+
+/*
+ * Login
+ */
+#login-container {
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80,1.0);
+}
+.login-form {
+    width: 350px;
+    height: 275px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+    border: 0px;
+
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto !important;
+    background: none;
+}
+.login-form .panel-body {
+    background: #ffffff;
+}
+.login-form .panel-heading {
+    text-align: center;
+    font-size: 30px;
+    background: rgba(52, 73, 94,1.0);
+    color: #fff;
+}
