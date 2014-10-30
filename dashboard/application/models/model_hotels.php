@@ -1,5 +1,5 @@
 <?php
-	class model_branches extends CI_Model {
+	class model_hotels extends CI_Model {
 	    function __construct() {
 	        parent::__construct();
 
