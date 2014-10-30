@@ -35,3 +35,7 @@ function echo_asset_url() {
 function asset_url() {
     return base_url() . 'assets/';
 }
+
+function echo_format_date($input, $format) {
+    echo date($format, strtotime($input));
+}

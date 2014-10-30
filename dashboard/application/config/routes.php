@@ -43,6 +43,8 @@ $route['404_override'] = '';
 
 $route['login'] = 'account/login';
 $route['do_login'] = 'account/do_login';
+
+$route['branches'] = 'branches';
 //$route['home'] = "home";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

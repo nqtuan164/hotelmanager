@@ -12,14 +12,14 @@ class model_branches extends CI_Model {
 
     }
 
-    public function select(input = array()) {
+    public function select($input = array()) {
     	$arr = array(
     			'num' => 10,
-    			'offset' => 0
-    			'id' = false,
+    			'offset' => 0,
+    			'id' => false,
     			'name' => false,
     			'activation' => 1,
-    			'select' => 'id, name, note'
+    			'select' => 'id, name, activation, note, created_date, updated_date'
     		);
 
     	$input = array_merge($arr, $input);

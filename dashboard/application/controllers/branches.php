@@ -2,23 +2,25 @@
 /**
  * Created by PhpStorm.
  * User: LEEYOOL
- * Date: 10/20/14
- * Time: 2:11 PM
+ * Date: 10/21/14
+ * Time: 5:08 PM
  */
 
-class Home extends CI_Controller{
+class Branches extends CI_Controller {
     function __construct() {
         parent::__construct();
-//        $this->load->view('templates/header');
-//        $this->load->view('home');
-//        $this->load->view('templates/footer');
+        $this->load->model('model_branches', 'BRANCHES');
     }
 
     public function index() {
-        $data['title'] = "Dashboard";
+    	$data['title'] = "Branches | Dashboard";
+    	$data['cur'] = "branches";
+
+    	$data['branches'] = $this->BRANCHES->select();
+
         $this->load->view('templates/header', $data);
         $this->load->view('templates/nav');
-        $this->load->view('home');
+        $this->load->view('branches');
         $this->load->view('templates/footer');
     }
 }
