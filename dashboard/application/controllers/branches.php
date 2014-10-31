@@ -23,4 +23,21 @@ class Branches extends CI_Controller {
         $this->load->view('branches');
         $this->load->view('templates/footer');
     }
+
+    public function branches_edit($id) {
+    	$data['title'] = "Edit Branches | Dashboard";
+    	$data['cur'] = "branches";
+    	$data['branch'] = $this->BRANCHES->select(array('id' => $id))[0];
+    	//var_dump($data);
+    	//$data['branches'] = $this->BRANCHES->select();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/nav');
+        $this->load->view('branches_edit');
+        $this->load->view('templates/footer');
+    }
+
+    public function branches_edit_do($id) {
+    	
+    }
 }

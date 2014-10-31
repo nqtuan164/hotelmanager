@@ -24,6 +24,8 @@ class model_branches extends CI_Model {
 
     	$input = array_merge($arr, $input);
 
+        //var_dump($input);
+
     	$this->db->select($input['select']);
 
     	if ($input['name'] != false) {

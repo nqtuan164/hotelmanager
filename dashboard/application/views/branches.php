@@ -44,7 +44,7 @@
 						</span>
 					</td>
 					<td>
-						<a class="btn-edit" href="" title=""><i class="fa fa-pencil"></i></a>
+						<a class="btn-edit" href="<?php echo base_url("branches/edit/" . $value['id']); ?>" title=""><i class="fa fa-pencil"></i></a>
 						<a class="btn-remove" href="" title=""><i class="fa fa-times"></i></a>
 					</td>
 				</tr>

@@ -45,6 +45,9 @@ $route['login'] = 'account/login';
 $route['do_login'] = 'account/do_login';
 
 $route['branches'] = 'branches';
+$route['branches/create'] = 'branches';
+$route['branches/edit/(:num)'] = 'branches/branches_edit/$1';
+$route['branches/edit_do/(:num)'] = 'branches/branches_edit/$1';
 //$route['home'] = "home";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
