@@ -5,20 +5,21 @@
 
 	    }
 
-	    public function select(input = array()) {
+	    public function select($input = array()) {
     	$arr = array(
     			'num' => 10,
-    			'offset' => 0
+    			'offset' => 0,
     			'id' => false,
     			'name' => false,
-    			'brachid' => false,
+    			'branchid' => false,
     			'activation' => 1,
-    			'select' => 'id, name, adress, brachid, note'
+    			'select' => 'h.id, h.name, h.address, h.branchid, h.note, b.name as branchname, h.activation, h.created_date, h.updated_date'
     		);
 
     	$input = array_merge($arr, $input);
 
     	$this->db->select($input['select']);
+        $this->db->join('branches b', 'b.id = h.branchid');
 
     	if ($input['name'] != false) {
     		$search = $this->db->escape_like_str($input['name']);
@@ -26,17 +27,17 @@
     	}
 
     	if ($input['id'] != false) {
-    		$this->db->where('id', $input['id']);
+    		$this->db->where('h.id', $input['id']);
     	}
 
-    	if($input['brachid']!= false){
-    		$this->db->where('brachid', $input['brachid']);
+    	if($input['branchid']!= false){
+    		$this->db->where('h.branchid', $input['branchid']);
     	}
 
     	if ($input['num'] == -1) {
-    		$query = $this->db->get('hotels');
+    		$query = $this->db->get('hotels h' );
     	} else {
-    		$query = $this->db->get('hotels', $input['num'], $input['offset']);
+    		$query = $this->db->get('hotels h', $input['num'], $input['offset']);
     	}
     	
     	return $query->result_array();

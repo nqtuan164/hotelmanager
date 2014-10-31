@@ -48,6 +48,16 @@ $route['branches'] = 'branches';
 $route['branches/create'] = 'branches';
 $route['branches/edit/(:num)'] = 'branches/branches_edit/$1';
 $route['branches/edit_do/(:num)'] = 'branches/branches_edit/$1';
+
+$route['hotels'] = 'hotels';
+$route['hotels/create'] = 'hotels';
+$route['hotels/edit/(:num)'] = 'hotels/hotels_edit/$1';
+$route['hotels/edit_do/(:num)'] = 'hotels/hotels_edit_do/$1';
+
+$route['roomtypes'] = 'roomtypes';
+$route['roomtypes/create'] = 'roomtypes';
+$route['roomtypes/edit/(:num)'] = 'roomtypes/roomtypes_edit/$1';
+$route['roomtypes/edit_do/(:num)'] = 'roomtypes/roomtypes_edit_do/$1';
 //$route['home'] = "home";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
